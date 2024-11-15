@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Rubik+Mono+One&display=swap');
+
+.header {
+    font-family: "Rubik Mono One", monospace;
+    background-color: #4e87ff;
+    color: white;
+    text-align: center;
+    font-size: 200%;
+}
+
+body {
+    background-color: #e9f0ff;
+}
+
+.que {
+    background-color: #dce7ff;
+    border: 2px solid #a0beff;
+}
+
+.que p {
+    font-weight: bolder;
+    font-size: large;
+    text-align: center;
+    background-color: #cdddff;
+}
+
+.subltest {
+    font-family: "LXGW WenKai TC", cursive;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    font-weight: bolder;
+    font-size: large;
+    transition: 1s;
+    background-color: #c9daff;
+}
+.subltest:hover {
+    font-weight: bolder;
+    background-color: #9dbcff;
+}
+
+.exit {
+    font-family: "LXGW WenKai TC", cursive;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+    transition: 1s;
+    background-color: #ffc9c9;
+    margin-left: 45%;
+    color: black;
+    border: 2px solid black;
+    text-decoration: none;
+}
+.exit:hover {
+    font-weight: bolder;
+    background-color: #ff9d9d;
+}

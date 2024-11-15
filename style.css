@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&family=LXGW+WenKai+TC&family=Rubik+Mono+One&display=swap');
+
+.header {
+    font-family: "Rubik Mono One", monospace;
+    background-color: #4e87ff;
+    color: white;
+    text-align: center;
+    font-size: 200%;
+}
+
+body {
+    background-color: #e9f0ff;
+}
+
+.post {
+    background-color: #dce7ff;
+    border: 2px solid #a0beff;
+}
+
+.post .theory h1 {
+    text-align: center;
+    font-family: "Brygada 1918", serif;
+}
+
+.post .theory h2 {
+    font-family: "Brygada 1918", serif;
+}
+
+.post .testBTN {
+    font-family: "LXGW WenKai TC", cursive;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+    transition: 1s;
+    background-color: #bdf5ff;
+    margin-left: 50%;
+    color: black;
+    border: 2px solid black;
+    text-decoration: none;
+}
+
+.post .testBTN:hover {
+    font-weight: bolder;
+    background-color: #91edfd;
+}
