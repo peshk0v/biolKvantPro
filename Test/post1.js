@@ -1,6 +1,6 @@
 console.log("JS STARTED!!!");
 
-var ansvers = [2, 1, 1, 1, 1];
+var ansvers = [1, 2, 3, 2, 1];
 
 function subl() {
     var score = 0;
@@ -15,7 +15,7 @@ function subl() {
     var q3 = document.querySelector('input[name="q3"]:checked');
     var q4 = document.querySelector('input[name="q4"]:checked');
     var q5 = document.querySelector('input[name="q5"]:checked');
-    
+
     if (q1 && q1.value === '' + ansvers[0]) {
         score++;
         q1TXTS[ansvers[0]-1].className = "anstxtT";
