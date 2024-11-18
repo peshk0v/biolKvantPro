@@ -57,3 +57,17 @@ body {
     font-weight: bolder;
     background-color: #ff9d9d;
 }
+
+.que .anstxt {
+    display: inline-block;
+}
+
+.que .anstxtT {
+    display: inline-block;
+    color: green;
+}
+
+.que .anstxtF {
+    display: inline-block;
+    color: red;
+}
