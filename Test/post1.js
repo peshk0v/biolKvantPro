@@ -105,7 +105,7 @@ function subl() {
     var ansByUsr = confirm("Ваш результат: " + score + " из 5\nВы желаете посмотреть правильные ответы?");
 
     if (ansByUsr) {} else {
-        window.location = "http://127.0.0.1:5500";
+        window.location = "https://peshk0v.github.io/biolKvantPro/";
     }
     // alert("Ваш результат: " + score + " из 5");
 };
