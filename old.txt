@@ -1,0 +1,110 @@
+<h1 class="level-1 rectangle">Вещества</h1>
+    <ol class="level-2-wrapper">
+    <li>
+        <h2 class="level-2 rectangle">
+            <div id="titl">Простые</div>
+            <div id="desk">В составе один вид  химического элемента</div>
+        </h2>
+        <ol class="level-3-wrapper">
+        <li>
+            <h3 class="level-3 rectangle">
+                <div id="titl">Металлы (Ме)</div>
+                <div id="desk">(O2)</div>
+            </h3>
+        </li>
+        <li>
+            <h3 class="level-3 rectangle">
+                <div id="titl">Неметаллы (НеМе)</div>
+                <div id="desk">(Fe)</div>
+            </h3>
+        </li>
+        </ol>
+    </li>
+    <li>
+        <h2 class="level-2 rectangle">
+            <div id="titl">Сложные</div>
+            <div id="desk">В составе два и более вида химических элементов</div>
+        </h2>
+        <ol class="level-3-wrapper">
+        <li>
+            <h3 class="level-3 rectangle">
+                <div id="titl">Оксиды</div>
+                <div id="desk">(ЭлО-2)</div>
+            </h3>
+        </li>
+        <li>
+            <h3 class="level-3 rectangle">
+                <div id="titl">Основания</div>
+                <div id="desk">
+                    Катион – Ме<sup>+1/+2</sup> или NH4<sup>+</sup><br />
+                    Анион – ОН<sup>-</sup>
+                </div>
+            </h3>
+            <!-- <ol class="level-4-wrapper">
+            <li>
+                <h4 class="level-4 rectangle">Person A</h4>
+            </li>
+            <li>
+                <h4 class="level-4 rectangle">Person B</h4>
+            </li>
+            <li>
+                <h4 class="level-4 rectangle">Person C</h4>
+            </li>
+            <li>
+                <h4 class="level-4 rectangle">Person D</h4>
+            </li>
+            </ol> -->
+            <li>
+                <h3 class="level-3 rectangle">
+                    <div id="titl">Амфотерные гидроксиды</div>
+                    <div id="desk">
+                        Катион – Ме<sup>+3/+4</sup><br />
+                        Анион – ОН-
+                    </div>
+                </h3>
+            </li>
+            <li>
+                <h3 class="level-3 rectangle">
+                    <div id="titl">Кислоты</div>
+                    <div id="desk">
+                        Катион – Ме<sup>+3/+4</sup><br />
+                        Анион – ОН-
+                    </div>
+                </h3>
+                <ol class="level-4-wrapper">
+                    <li>
+                        <h3 class="level-4 rectangle">
+                            <div id="titl">Кислородсодержащие</div>
+                            <div id="desk">
+                                Катион – H<sup>+</sup><br />
+                                Анион – кислотный остаток HeMeO<br />
+                                (вместо НеМе может быть Mn, Cr)
+                            </div>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3 class="level-4 rectangle">
+                            <div id="titl">Бескислородные</div>
+                            <div id="desk">
+                                Катион – H<sup>+</sup><br />
+                                Анион – кислотный остаток HeMe
+                            </div>
+                        </h3>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <h3 class="level-3 rectangle">
+                    <div id="titl">Соли</div>
+                    <div id="desk">
+                        Катион – Ме или NH4<sup>+</sup><br />
+                        Анион – кислотный остаток
+                    </div>
+                </h3>
+            </li>
+        </li>
+        
+        </ol>
+    </li>
+    
+    </ol>
