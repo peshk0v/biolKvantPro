@@ -5,21 +5,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Гидроксиды</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+        :root {
+            --base: #3498db;
+            --amphoteric: #e67e22;
+            --acid: #e74c3c;
+            --exception: #2ecc71;
+            --background: #f5f6fa;
+        }
+
+        body {
+            background: var(--background);
+            font-family: 'Quicksand', sans-serif;
+            padding: 40px;
+        }
+
+        .tree {
+            position: relative;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .node {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            border-left: 4px solid;
+            position: relative;
+        }
+
+        .node:hover {
+            transform: translateX(10px);
+        }
+
+        .category-title {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .details {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .column {
+            flex: 1;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .chem-formula {
+            background: #f8f9fa;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 2px;
+            font-size: 1.1em;
+        }
+
+        .base { border-color: var(--base); }
+        .amphoteric { border-color: var(--amphoteric); }
+        .acid { border-color: var(--acid); }
+        .exception { border-color: var(--exception); }
+
+        #classifBtn::after {
+            content: "Оксиды";
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        #oxidbtn::after {
+            content: "Кислоты";
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+    </style>
 </head>
 <body>
     <h1>Гидроксиды</h1>
     <h3><b>ГИДРОКСИДЫ</b> – это вещества группы Эл-ОН.</h3>
     <h2>Гидроксиды делятся на: </h2>
-    <img src="https://i.ibb.co/mFYQ0ywj/image.png" alt="Таблица классификаций веществ">
-    <a href="https://peshk0v.github.io/biolKvantPro/oxid.html"><div class="btnnn" id="classifBtn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+    
+    <div class="tree">
+        <div class="flex-container">
+            <!-- Основания -->
+            <div class="column">
+                <div class="node base">
+                    <div class="category-title">Основания</div>
+                    
+                    <div class="node" style="margin-left: 30px;">
+                        <div class="category-title">Растворимые (щелочи)</div>
+                        <div class="details">
+                            <div>Основные оксиды щелочных и щелочноземельных металлов (Ca, Sr, Ba)</div>
+                            <div class="chem-formula">Na₂O + H₂O → 2NaOH</div>
+                            <div class="chem-formula">BaO + H₂O → Ba(OH)₂</div>
+                        </div>
+                    </div>
+    
+                    <div class="node" style="margin-left: 30px;">
+                        <div class="category-title">Нерастворимые</div>
+                        <div class="details">
+                            <div>Основные оксиды других металлов</div>
+                            <div class="chem-formula">CrO + H₂O → Cr(OH)₂</div>
+                            <div class="chem-formula">CuO + H₂O → Cu(OH)₂</div>
+                            
+                            <!-- Перенесённое исключение -->
+                            <div class="node exception" style="margin-top: 10px;">
+                                <div class="category-title">Исключение</div>
+                                <div class="chem-formula">NH₄OH</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Амфотерные гидроксиды -->
+            <div class="column">
+                <div class="node amphoteric">
+                    <div class="category-title">Амфотерные гидроксиды</div>
+                    <div class="details">
+                        <div>Образованы амфотерными оксидами</div>
+                        <div class="chem-formula">Cr₂O₃ + 3H₂O → 2Cr(OH)₃</div>
+                        <div class="chem-formula">ZnO + H₂O → Zn(OH)₂</div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Кислоты -->
+            <div class="column">
+                <div class="node acid">
+                    <div class="category-title">Кислоты (кислородсодержащие)</div>
+                    <div class="details">
+                        <div class="chem-formula">CrO₃ + H₂O → H₂CrO₄</div>
+                        <div class="chem-formula">SO₃ + H₂O → H₂SO₄</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://peshk0v.github.io/biolKvantPro/oxid.html" id="classifBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
             <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1"/>
         </svg>
-    </div></a>
-    <a href="https://peshk0v.github.io/biolKvantPro/kisloti.html"><div class="btnnn" id="oxidbtn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+    </a>
+    <a href="https://peshk0v.github.io/biolKvantPro/kisloti.html" id="oxidbtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
             <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>
         </svg>
-    </div></a>
+    </a>
 </body>
 </html>

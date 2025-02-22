@@ -5,12 +5,235 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оксиды</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+        :root {
+            --non-salt: #95a5a6;
+            --basic: #3498db;
+            --amphoteric: #e67e22;
+            --acid: #e74c3c;
+            --background: #f5f6fa;
+        }
+
+        body {
+            background: var(--background);
+            font-family: 'Quicksand', sans-serif;
+            padding: 40px;
+        }
+
+        .tree {
+            position: relative;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .node {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            border-left: 4px solid;
+            position: relative;
+        }
+
+        .node:hover {
+            transform: translateX(10px);
+        }
+
+        .category-title {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .details {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .column {
+            flex: 1;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .chem-formula {
+            background: #f8f9fa;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 2px;
+            font-size: 1.1em; /* Увеличенный размер шрифта */
+        }
+
+        .non-salt { border-color: var(--non-salt); }
+        .basic { border-color: var(--basic); }
+        .amphoteric { border-color: var(--amphoteric); }
+        .acid { border-color: var(--acid); }
+
+        #classifBtn::after {
+            content: "Классификации";
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        #oxidbtn::after {
+            content: "Гидроксиды";
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        /* Стиль для древовидного списка классификации оксидов */
+        .oxlist {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            counter-reset: section;
+            list-style: none;
+            position: relative;
+        }
+
+        .oxlist > li {
+            position: relative;
+            margin: 15px 0;
+            padding-left: 40px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .oxlist > li::before {
+            content: counter(section) ".";
+            counter-increment: section;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background: #3498db;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-size: 0.9em;
+        }
+
+        .oxlist ul {
+            margin: 10px 0;
+            padding-left: 30px;
+            border-left: 2px solid #3498db;
+        }
+
+        .oxlist li li {
+            margin: 8px 0;
+            padding: 8px 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .oxlist li li::before {
+            content: "•";
+            color: #3498db;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .oxlist li li:hover {
+            transform: translateX(10px);
+            background: #e3f2fd;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Стили для текста внутри списка */
+        .oxlist strong {
+            color: #e74c3c;
+        }
+
+        .oxlist em {
+            color: #2ecc71;
+            font-style: normal;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
     <h1>Оксиды</h1>
     <h3><b>ОКСИДЫ</b> – это сложные вещества, состоящие из двух химических элементов, одним из которых является кислород в степени окисления -2.</h3>
     <h2>Оксиды делятся на: </h2>
-    <img src="https://i.ibb.co/fGYf6fk2/image.png" alt="Таблица классификаций веществ">
+    <div class="tree">
+        <div class="flex-container">
+            <!-- Несолеобразующие -->
+            <div class="column">
+                <div class="node non-salt">
+                    <div class="category-title">Несолеобразующие</div> <!-- Исправлено название -->
+                    <div class="details">
+                        <span class="chem-formula">CO</span>
+                        <span class="chem-formula">N₂O</span>
+                        <span class="chem-formula">NO</span>
+                        <span class="chem-formula">SiO</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Солеобразующие -->
+            <div class="column">
+                <div class="node">
+                    <div class="category-title">Солеобразующие</div> <!-- Исправлено название -->
+                    
+                    <div class="node basic" style="margin-left: 30px;">
+                        <div class="category-title">Основные</div>
+                        <div class="details">
+                            <div>Металлы со степенью окисления +1, +2</div>
+                            <div class="chem-formula">Li₂O</div>
+                            <div class="chem-formula">Na₂O</div>
+                            <div class="chem-formula">CaO</div>
+                            <div class="chem-formula">BaO</div>
+                            <div class="chem-formula">FeO</div>
+                        </div>
+                    </div>
+    
+                    <div class="node amphoteric" style="margin-left: 30px;">
+                        <div class="category-title">Амфотерные</div>
+                        <div class="details">
+                            <div>Металлы со степенью окисления +3, +4</div>
+                            <div>Исключения:</div>
+                            <div class="chem-formula">ZnO</div>
+                            <div class="chem-formula">BeO</div>
+                            <div class="chem-formula">Al₂O₃</div>
+                            <div class="chem-formula">Fe₂O₃</div>
+                            <div class="chem-formula">MnO₂</div>
+                        </div>
+                    </div>
+    
+                    <div class="node acid" style="margin-left: 30px;">
+                        <div class="category-title">Кислотные</div>
+                        <div class="details">
+                            <div>Металлы +5, +6, +7 и неметаллы</div>
+                            <div class="chem-formula">CrO₃</div>
+                            <div class="chem-formula">Mn₂O₇</div>
+                            <div class="chem-formula">SO₂</div>
+                            <div class="chem-formula">CO₂</div>
+                            <div class="chem-formula">P₂O₅</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <h2 id="oxidschmH2">Схема определения оксида:</h2>
     <ol class="oxlist">
@@ -45,15 +268,15 @@
         </ul>
     </ol>
 
-    <a href="https://peshk0v.github.io/biolKvantPro/"><div class="btnnn" id="classifBtn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+    <a href="https://peshk0v.github.io/biolKvantPro/" id="classifBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
             <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1"/>
         </svg>
-    </div></a>
-    <a href="https://peshk0v.github.io/biolKvantPro/gidroxid.html"><div class="btnnn" id="oxidbtn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+    </a>
+    <a href="https://peshk0v.github.io/biolKvantPro/gidroxid.html" id="oxidbtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
             <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>
         </svg>
-    </div></a>
+    </a>
 </body>
 </html>

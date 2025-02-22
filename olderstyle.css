@@ -1,0 +1,174 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+body {
+    background-color: white;
+    text-align: center;
+}
+
+.btnnn {
+    text-decoration: none;
+    color: black;
+    /* background-color: blueviolet; */
+    transition: 0.5s;
+    display: block;
+    position: absolute;
+    /* margin: auto; */
+}
+
+.oxlist {
+    text-align: left;
+}
+
+#oxidschmH2 {
+    text-align: left;
+}
+
+#praktiBTN, .testBTN {
+    background-color: black;
+    color: white;
+    font-family: "Comfortaa", serif;
+    font-weight: bolder;
+    height: 48px;
+    width: 256px;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+#oxidbtn {
+    right: 30%;
+}
+
+#praktiBTN {
+    right: 20%;
+}
+
+#classifBtnSalt{
+    left: 20%
+}
+
+#classifBtn {
+    left: 30%;
+}
+
+#btt {
+    left: 2%;
+}
+
+#classifBtn:hover {
+    left: 29.5%;
+}
+
+#btt:hover {
+    left: 1.5%;
+}
+
+#btt:active {
+    left: 0.5%;
+}
+
+#classifBtn:active {
+    left: 28%;
+}
+
+#oxidbtn:hover {
+    right: 29.5%;
+}
+
+#oxidbtn:active {
+    right: 28%;
+}
+
+#praktiBTN:hover {
+    right: 19.5%;
+}
+
+#praktiBTN:active {
+    right: 18%;
+}
+
+/* TEST */
+
+.ansvrs {
+    font-size: large;
+}
+
+.enter {
+    text-align: center;
+}
+
+.test {
+    background-color: rgba(10, 10, 10, 0.103);
+    /* border-radius: 10px; */
+    text-align: left;
+}
+
+.textInTest {
+    transition: 0.5;
+}
+
+.blr {
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+    transition: 0.5s;
+    position: absolute;
+    width: 100%;
+    height: 112%;
+    top: 0;
+    left: 0;
+    display: none;
+    animation: 1s 0s alternate bgAnim;
+}
+
+@keyframes bgAnim {
+    from {
+      /* pushes the sun down past the viewport */
+        opacity: 0;
+    }
+    to {
+      /* returns the sun to its default position */
+      opacity: 0.5;
+    }
+}
+
+.popup {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 15%;
+    left: 18%;
+    width: 60%;
+    height: 70%;
+    display: none;
+    box-shadow: 0px 0px 20px 20px #ffffff;
+    animation: 1s 0s alternate popupAnim;
+    text-align: left;
+}
+
+@keyframes popupAnim {
+    from {
+      /* pushes the sun down past the viewport */
+      top: -20%;
+    }
+    to {
+      /* returns the sun to its default position */
+      top: 15%;
+    }
+}
+
+.testBTN:hover {
+    margin-top: 0.5%;
+}
+
+.clsppbtn {
+    background-color: #ffffff00;
+    border: none;
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    transition: 0.5s;
+}
+
+.clsppbtn:hover {
+    cursor: pointer;
+    right: 1.3%;
+    top: 1.3%;
+} */

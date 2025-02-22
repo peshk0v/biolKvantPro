@@ -5,20 +5,183 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Соли</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+        :root {
+            --basic: #3498db;
+            --neutral: #2ecc71;
+            --acidic: #e74c3c;
+            --double: #9b59b6;
+            --mixed: #e67e22;
+            --complex: #1abc9c;
+            --background: #f5f6fa;
+        }
+
+        body {
+            background: var(--background);
+            font-family: 'Quicksand', sans-serif;
+            padding: 40px;
+        }
+
+        .tree {
+            position: relative;
+            margin: 0 auto;
+            max-width: 1400px;
+        }
+
+        .node {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            border-left: 4px solid;
+            position: relative;
+        }
+
+        .node:hover {
+            transform: translateX(10px);
+        }
+
+        .category-title {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .details {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 300px;
+            padding: 0 15px;
+        }
+
+        .chem-formula {
+            background: #f8f9fa;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 4px;
+            font-size: 1.2em;
+            display: inline-block;
+        }
+
+        /* Цвета категорий */
+        .basic { border-color: var(--basic); }
+        .neutral { border-color: var(--neutral); }
+        .acidic { border-color: var(--acidic); }
+        .double { border-color: var(--double); }
+        .mixed { border-color: var(--mixed); }
+        .complex { border-color: var(--complex); }
+
+        #classifBtn::after {
+            content: "Кислоты";
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        #oxidbtn::after {
+            content: "Перейти к практике";
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+    </style>
 </head>
 <body>
     <h1>Соли</h1>
     <h3><b>СОЛИ</b> – это сложные соединения, состоящие из одного или нескольких катионов металлов (или ионов, подобных металлам, например, аммоний) и анионов кислотного остатка.</h3>
     <h3>Анион кислотного остатка чаще всего представлен неметаллом, либо неметаллом + кислородом. Но также кислотный остаток может образовывать металл со степенью окисления +5, +6, +7 (например, марганец и хром).</h3>
     <h2>Соли делятся на: </h2>
-    <img src="https://i.ibb.co/WvGbXdgx/image.png" alt="Таблица классификаций веществ">
-    <a href="https://peshk0v.github.io/biolKvantPro/kisloti.html"><div class="btnnn" id="classifBtnSalt">
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+    
+    <div class="tree">
+        <div class="flex-container">
+            <!-- Основные соли -->
+            <div class="column">
+                <div class="node basic">
+                    <div class="category-title">Основные соли</div>
+                    <div class="details">
+                        Состав: Катион + OH⁺ + анион
+                        <div class="chem-formula">(CuOH)₂CO₃</div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Средние соли -->
+            <div class="column">
+                <div class="node neutral">
+                    <div class="category-title">Средние соли</div>
+                    <div class="details">
+                        Состав: Катион + анион
+                        <div class="chem-formula">CuCO₃</div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Кислые соли -->
+            <div class="column">
+                <div class="node acidic">
+                    <div class="category-title">Кислые соли</div>
+                    <div class="details">
+                        Состав: Катион + H⁺ + анион
+                        <div class="chem-formula">Cu(HCO₃)₂</div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Двойные соли -->
+            <div class="column">
+                <div class="node double">
+                    <div class="category-title">Двойные соли</div>
+                    <div class="details">
+                        Состав: Катион(1) + Катион(2) + кислотный остаток
+                        <div class="chem-formula">KAl(SO₄)₂</div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Смешанные соли -->
+            <div class="column">
+                <div class="node mixed">
+                    <div class="category-title">Смешанные соли</div>
+                    <div class="details">
+                        Состав: Катион + кислотный остаток(1) + кислотный остаток(2)
+                        <div class="chem-formula">Ca[ClO]Cl</div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Комплексные соли -->
+            <div class="column">
+                <div class="node complex">
+                    <div class="category-title">Комплексные соли</div>
+                    <div class="details">
+                        Содержат комплексный ион в квадратных скобках
+                        <div class="chem-formula">K[A(IOH)]₄</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://peshk0v.github.io/biolKvantPro/kisloti.html" id="classifBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
             <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1"/>
         </svg>
-    </div></a>
-    <a href="https://peshk0v.github.io/biolKvantPro/test.html"><div class="btnnn" id="praktiBTN">
-        <p></p>Перейти к практике
-    </div></a>
+    </a>
+    <a href="https://peshk0v.github.io/biolKvantPro/test.html" id="oxidbtn"></a>
 </body>
 </html>
