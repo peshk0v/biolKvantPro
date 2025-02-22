@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+:root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --hydroxide: #e74c3c;
+    --background: #f5f6fa;
+}
+
+body {
+    background: var(--background);
+    font-family: 'Quicksand', sans-serif;
+    padding: 40px;
+}
+
+.tree {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.node {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    border-left: 4px solid var(--accent);
+    position: relative;
+}
+
+.hydroxide-group {
+    border-left-color: var(--hydroxide);
+}
+
+.node:hover {
+    transform: translateX(10px);
+}
+
+.category-title {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.details {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    padding: 0 20px;
+    position: relative;
+}
+
+.chem-formula {
+    background: #f8f9fa;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.hydroxide-badge {
+    background: var(--hydroxide);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin-left: 8px;
+}
+</style>
+</head>
+<body>
+
+<div class="tree">
+    <div class="flex-container">
+        <!-- Простые вещества -->
+        <div class="column">
+            <div class="node">
+                <div class="category-title">Простые вещества</div>
+                <div class="details">Один химический элемент</div>
+
+                <div class="node" style="margin-left: 30px;">
+                    <div class="subcategory">Металлы (Me)</div>
+                    <div class="details">
+                        Пример: <span class="chem-formula">Fe</span>
+                    </div>
+                </div>
+
+                <div class="node" style="margin-left: 30px;">
+                    <div class="subcategory">Неметаллы (HeMe)</div>
+                    <div class="details">
+                        Пример: <span class="chem-formula">O₂</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Сложные вещества -->
+        <div class="column">
+            <div class="node">
+                <div class="category-title">Сложные вещества</div>
+                <div class="details">Два и более элементов</div>
+
+                <!-- Гидроксиды -->
+                <div class="node hydroxide-group" style="margin-left: 30px;">
+                    <div class="category-title">Гидроксиды <span class="hydroxide-badge">Особая группа</span></div>
+
+                    <div class="node" style="margin-left: 30px;">
+                        <div class="subcategory">Основания</div>
+                        <div class="details">
+                            Состав: <span class="chem-formula">Me¹⁺/²⁺</span> или
+                            <span class="chem-formula">NH₄⁺</span> + <span class="chem-formula">OH⁻</span>
+                        </div>
+                    </div>
+
+                    <div class="node" style="margin-left: 30px;">
+                        <div class="subcategory">Амфотерные гидроксиды</div>
+                        <div class="details">
+                            Состав: <span class="chem-formula">Me³⁺/²⁺</span> + <span class="chem-formula">OH⁻</span>
+                        </div>
+                    </div>
+
+                    <div class="node" style="margin-left: 30px;">
+                        <div class="subcategory">Кислородсодержащие кислоты</div>
+                        <div class="details">
+                            Состав: <span class="chem-formula">H⁺</span> + <span class="chem-formula">HeMeO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Остальные категории -->
+                <div class="node" style="margin-left: 30px;">
+                    <div class="subcategory">Оксиды</div>
+                    <div class="details">
+                        Пример: <span class="chem-formula">3nO²</span>
+                    </div>
+                </div>
+
+                <div class="node" style="margin-left: 30px;">
+                    <div class="subcategory">Бескислородные кислоты</div>
+                    <div class="details">
+                        Состав: <span class="chem-formula">H⁺</span> + <span class="chem-formula">HeMe</span>
+                    </div>
+                </div>
+
+                <div class="node" style="margin-left: 30px;">
+                    <div class="subcategory">Соли</div>
+                    <div class="details">
+                        Состав: <span class="chem-formula">Me</span> или
+                        <span class="chem-formula">NH₄⁺</span> + кислотный остаток
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
