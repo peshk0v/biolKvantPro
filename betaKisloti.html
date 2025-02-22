@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+:root {
+    --oxygen-free: #3498db;
+    --oxygen-containing: #2ecc71;
+    --background: #f5f6fa;
+}
+
+body {
+    background: var(--background);
+    font-family: 'Quicksand', sans-serif;
+    padding: 40px;
+}
+
+.tree {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.node {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    border-left: 4px solid;
+    position: relative;
+}
+
+.node:hover {
+    transform: translateX(10px);
+}
+
+.category-title {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.details {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    padding: 0 20px;
+    position: relative;
+}
+
+.chem-formula {
+    background: #f8f9fa;
+    padding: 6px 12px;  /* Увеличил padding */
+    border-radius: 4px;
+    font-family: monospace;
+    margin: 4px;
+    font-size: 1.3em;  /* Увеличил размер шрифта с 1.1em до 1.3em */
+    font-weight: 600;  /* Добавил жирность */
+}
+
+.oxygen-free { border-color: var(--oxygen-free); }
+.oxygen-containing { border-color: var(--oxygen-containing); }
+</style>
+</head>
+<body>
+
+<div class="tree">
+    <div class="flex-container">
+        <!-- Бескислородные кислоты -->
+        <div class="column">
+            <div class="node oxygen-free">
+                <div class="category-title">Бескислородные кислоты</div>
+                
+                <div class="node" style="margin-left: 30px;">
+                    <div class="category-title">Одноосновные</div>
+                    <div class="details">
+                        <div class="chem-formula">HCl</div>
+                    </div>
+                </div>
+
+                <div class="node" style="margin-left: 30px;">
+                    <div class="category-title">Двухосновные</div>
+                    <div class="details">
+                        <div class="chem-formula">H₂S</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Кислородосодержащие кислоты -->
+        <div class="column">
+            <div class="node oxygen-containing">
+                <div class="category-title">Кислородосодержащие кислоты</div>
+                
+                <div class="node" style="margin-left: 30px;">
+                    <div class="category-title">Одноосновные</div>
+                    <div class="details">
+                        <div class="chem-formula">HClO₄</div>
+                    </div>
+                </div>
+
+                <div class="node" style="margin-left: 30px;">
+                    <div class="category-title">Двухосновные</div>
+                    <div class="details">
+                        <div class="chem-formula">H₂SO₃</div>
+                    </div>
+                </div>
+
+                <div class="node" style="margin-left: 30px;">
+                    <div class="category-title">Трехосновные</div>
+                    <div class="details">
+                        <div class="chem-formula">H₃PO₄</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
