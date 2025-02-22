@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+:root {
+    --non-salt: #95a5a6;
+    --basic: #3498db;
+    --amphoteric: #e67e22;
+    --acid: #e74c3c;
+    --background: #f5f6fa;
+}
+
+body {
+    background: var(--background);
+    font-family: 'Quicksand', sans-serif;
+    padding: 40px;
+}
+
+.tree {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.node {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    border-left: 4px solid;
+    position: relative;
+}
+
+.node:hover {
+    transform: translateX(10px);
+}
+
+.category-title {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.details {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    padding: 0 20px;
+    position: relative;
+}
+
+.chem-formula {
+    background: #f8f9fa;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    margin: 2px;
+    font-size: 1.1em; /* Увеличенный размер шрифта */
+}
+
+.non-salt { border-color: var(--non-salt); }
+.basic { border-color: var(--basic); }
+.amphoteric { border-color: var(--amphoteric); }
+.acid { border-color: var(--acid); }
+</style>
+</head>
+<body>
+
+<div class="tree">
+    <div class="flex-container">
+        <!-- Несолеобразующие -->
+        <div class="column">
+            <div class="node non-salt">
+                <div class="category-title">Несолеобразующие</div> <!-- Исправлено название -->
+                <div class="details">
+                    <span class="chem-formula">CO</span>
+                    <span class="chem-formula">N₂O</span>
+                    <span class="chem-formula">NO</span>
+                    <span class="chem-formula">SiO</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Солеобразующие -->
+        <div class="column">
+            <div class="node">
+                <div class="category-title">Солеобразующие</div> <!-- Исправлено название -->
+                
+                <div class="node basic" style="margin-left: 30px;">
+                    <div class="category-title">Основные</div>
+                    <div class="details">
+                        <div>Металлы со степенью окисления +1, +2</div>
+                        <div class="chem-formula">Li₂O</div>
+                        <div class="chem-formula">Na₂O</div>
+                        <div class="chem-formula">CaO</div>
+                        <div class="chem-formula">BaO</div>
+                        <div class="chem-formula">FeO</div>
+                    </div>
+                </div>
+
+                <div class="node amphoteric" style="margin-left: 30px;">
+                    <div class="category-title">Амфотерные</div>
+                    <div class="details">
+                        <div>Металлы со степенью окисления +3, +4</div>
+                        <div>Исключения:</div>
+                        <div class="chem-formula">ZnO</div>
+                        <div class="chem-formula">BeO</div>
+                        <div class="chem-formula">Al₂O₃</div>
+                        <div class="chem-formula">Fe₂O₃</div>
+                        <div class="chem-formula">MnO₂</div>
+                    </div>
+                </div>
+
+                <div class="node acid" style="margin-left: 30px;">
+                    <div class="category-title">Кислотные</div>
+                    <div class="details">
+                        <div>Металлы +5, +6, +7 и неметаллы</div>
+                        <div class="chem-formula">CrO₃</div>
+                        <div class="chem-formula">Mn₂O₇</div>
+                        <div class="chem-formula">SO₂</div>
+                        <div class="chem-formula">CO₂</div>
+                        <div class="chem-formula">P₂O₅</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
