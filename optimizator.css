@@ -1,0 +1,47 @@
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .tree {
+        max-width: 100%;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .node {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    #oxidbtn, #classifBtn {
+        position: fixed;
+        bottom: 15px;
+        padding: 10px 20px;
+        /* font-size: 0.9em; */
+        border-radius: 20px;
+        width: 30%;
+    }
+
+    #oxidbtn {
+        right: 15px; /* Кнопка "Соли" слева */
+    }
+
+    #classifBtn {
+        right: 15px; /* Кнопка "Гидроксиды" справа */
+    }
+
+    /* #oxidbtn .bi, #classifBtn .bi {
+        width: 24px;
+        height: 24px;
+    } */
+}
