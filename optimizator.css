@@ -1,8 +1,5 @@
 /* Адаптация под мобильные устройства */
 @media (max-width: 768px) {
-    /* body {
-        padding: 20px;
-    } */
 
     .tree {
         max-width: 100%;
