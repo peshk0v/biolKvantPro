@@ -8,5 +8,5 @@ body {
     font-family: 'Quicksand', sans-serif;
     background: var(--background);
     color: var(--primary);
-    margin-left: 270px;
+    /* margin-left: 270px; */
 }
