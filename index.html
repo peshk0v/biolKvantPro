@@ -87,20 +87,88 @@
             margin-left: 8px;
         }
 
-        #oxidbtn::after {
-            content: "Оксиды";
-            font-weight: 600;
-            font-size: 1.1em;
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -280px;
+            width: 250px; /* Ширина sidebar */
+            height: 100%; /* Высота на весь экран */
+            background: #2c3e50; /* Основной цвет */
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Тень для объема */
+            z-index: 1000;
+            overflow-y: auto; /* Прокрутка, если контент превышает высоту */
+            transition: 1s;
+            animation: SBFydeOut 2s;
         }
+
+        @keyframes SBFydeOut {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left:-280px;
+            }
+        }
+
+        .sidebar:hover {
+            left: 0px;
+        }
+
+        .sidebar ul {
+            list-style: none; /* Убираем маркеры списка */
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0; /* Отступы между пунктами */
+        }
+
+        .sidebar ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+            padding: 10px 15px;
+            border-radius: 8px; /* Скругленные углы */
+            transition: background 0.3s, color 0.3s; /* Плавный переход для эффектов */
+        }
+
+        .sidebar ul li a:hover {
+            background: #3498db; /* Цвет фона при наведении */
+            color: white; /* Цвет текста при наведении */
+        }
+
+        .sidebar ul li a.active {
+            background: #3498db; /* Цвет для активного пункта */
+            color: white;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3); /* Тень для выделения */
+        }
+
     </style>
 </head>
 <body>
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html" class="active">Классификация</a></li>
+            <li><a href="oxid.html">Оксиды</a></li>
+            <li><a href="gidroxid.html">Гидроксиды</a></li>
+            <li><a href="kisloti.html">Кислоты</a></li>
+            <li><a href="soli.html">Соли</a></li>
+            <li><a href="test.html">Практический тест</a></li>
+        </ul>
+    </div>
+
     <h1>Классификация веществ в неорганической химии</h1>
     <div class="tree">
         <div class="flex-container">
             <!-- Простые вещества -->
             <div class="column">
-                <div class="node">
+                <div class="node" id="simple-substances">
                     <div class="category-title">Простые вещества</div>
                     <div class="details">Один химический элемент</div>
     
@@ -122,12 +190,12 @@
     
             <!-- Сложные вещества -->
             <div class="column">
-                <div class="node">
+                <div class="node" id="complex-substances">
                     <div class="category-title">Сложные вещества</div>
                     <div class="details">Два и более элементов</div>
     
                     <!-- Гидроксиды -->
-                    <div class="node hydroxide-group" style="margin-left: 30px;">
+                    <div class="node hydroxide-group" style="margin-left: 30px;" id="hydroxides">
                         <div class="category-title">Гидроксиды <span class="hydroxide-badge">Особая группа</span></div>
     
                         <div class="node" style="margin-left: 30px;">
@@ -154,14 +222,14 @@
                     </div>
     
                     <!-- Остальные категории -->
-                    <div class="node" style="margin-left: 30px;">
+                    <div class="node" style="margin-left: 30px;" id="oxides">
                         <div class="subcategory">Оксиды</div>
                         <div class="details">
                             Пример: <span class="chem-formula">3nO²</span>
                         </div>
                     </div>
     
-                    <div class="node" style="margin-left: 30px;">
+                    <div class="node" style="margin-left: 30px;" id="acids">
                         <div class="subcategory">Бескислородные кислоты</div>
                         <div class="details">
                             Состав: <span class="chem-formula">H⁺</span> + <span class="chem-formula">HeMe</span>
@@ -179,12 +247,6 @@
             </div>
         </div>
     </div>
-    <!-- <img src="https://i.ibb.co/Gv1ZtNqN/image.png" alt="Таблица классификаций веществ"> -->
-    <a href="oxid.html" id="oxidbtn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
-            <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0-2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>
-        </svg>
-    </a>
 
     <!-- Footer -->
     <footer style="margin-top: 40px; padding: 20px; background: #2c3e50; color: white; text-align: center; border-radius: 10px;">
@@ -195,3 +257,4 @@
     </footer>
 </body>
 </html>
+``` 

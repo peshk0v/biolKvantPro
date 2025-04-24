@@ -89,20 +89,82 @@
         .mixed { border-color: var(--mixed); }
         .complex { border-color: var(--complex); }
 
-        #classifBtn::after {
-            content: "Кислоты";
-            font-weight: 600;
-            font-size: 1.1em;
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -280px;
+            width: 250px; /* Ширина sidebar */
+            height: 100%; /* Высота на весь экран */
+            background: #2c3e50; /* Основной цвет */
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Тень для объема */
+            z-index: 1000;
+            overflow-y: auto; /* Прокрутка, если контент превышает высоту */
+            transition: 1s;
+            animation: SBFydeOut 2s;
         }
 
-        #oxidbtn::after {
-            content: "Перейти к практике";
-            font-weight: 600;
-            font-size: 1.1em;
+        @keyframes SBFydeOut {
+            from {
+                left: 0px;
+            }
+
+            to {
+                left:-280px;
+            }
+        }
+
+        .sidebar:hover {
+            left: 0px;
+        }
+
+        .sidebar ul {
+            list-style: none; /* Убираем маркеры списка */
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0; /* Отступы между пунктами */
+        }
+
+        .sidebar ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+            padding: 10px 15px;
+            border-radius: 8px; /* Скругленные углы */
+            transition: background 0.3s, color 0.3s; /* Плавный переход для эффектов */
+        }
+
+        .sidebar ul li a:hover {
+            background: #3498db; /* Цвет фона при наведении */
+            color: white; /* Цвет текста при наведении */
+        }
+
+        .sidebar ul li a.active {
+            background: #3498db; /* Цвет для активного пункта */
+            color: white;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3); /* Тень для выделения */
         }
     </style>
 </head>
 <body>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html">Классификация</a></li>
+            <li><a href="oxid.html">Оксиды</a></li>
+            <li><a href="gidroxid.html">Гидроксиды</a></li>
+            <li><a href="kisloti.html">Кислоты</a></li>
+            <li><a href="soli.html" class="active">Соли</a></li>
+            <li><a href="test.html">Практический тест</a></li>
+        </ul>
+    </div>
+
     <h1>Соли</h1>
     <h3><b>СОЛИ</b> – это сложные соединения, состоящие из одного или нескольких катионов металлов (или ионов, подобных металлам, например, аммоний) и анионов кислотного остатка.</h3>
     <h3>Анион кислотного остатка чаще всего представлен неметаллом, либо неметаллом + кислородом. Но также кислотный остаток может образовывать металл со степенью окисления +5, +6, +7 (например, марганец и хром).</h3>
@@ -177,12 +239,5 @@
             </div>
         </div>
     </div>
-
-    <a href="kisloti.html" id="classifBtn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
-            <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1"/>
-        </svg>
-    </a>
-    <a href="test.html" id="oxidbtn"></a>
 </body>
 </html>

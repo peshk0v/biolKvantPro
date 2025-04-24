@@ -23,22 +23,17 @@
         padding: 15px;
     }
 
-    #oxidbtn, #classifBtn {
-        position: fixed;
-        bottom: 15px;
-        padding: 10px 20px;
-        /* font-size: 0.9em; */
-        border-radius: 20px;
-        width: 30%;
+    .sidebar {
+        left: -270px;
     }
 
-    #oxidbtn {
-        right: 15px; /* Кнопка "Соли" слева */
+    /* #oxidbtn {
+        right: 15px;
     }
 
     #classifBtn {
-        right: 15px; /* Кнопка "Гидроксиды" справа */
-    }
+        right: 15px; 
+    } */
 
     /* #oxidbtn .bi, #classifBtn .bi {
         width: 24px;
